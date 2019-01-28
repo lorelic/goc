@@ -12,7 +12,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "goc"
 	app.Usage = "Runs Go using GoCenter"
-	app.Version = "1.0.0"
+	app.Version = "1.0.1"
 	args := os.Args
 	app.Action = func(c *cli.Context) error {
 		return goCmd(c)
@@ -38,7 +38,7 @@ func goCmd(c *cli.Context) error {
 	// Check env first.
 	url := os.Getenv("GOC_GO_CENTER_URL")
 	if url == "" {
-		url = "https://gocenter.jfrog.io/gocenter/"
+		url = "https://gocenter.io/"
 	}
 
 	repo := os.Getenv("GOC_GO_CENTER_REPO")
