@@ -15,11 +15,16 @@ The ```goc``` utility automatically assigns *GOPROXY* to [GoCenter](https://goce
 ![](docs/goc-flow.png "")
 
 # Download and Installation
-You can download the executable directly using the following curl command
-```aidl
+You can download ```goc``` as follows.
+## Curl Command
+```
 curl -fL https://getgoc.gocenter.io | sh
 ```
-You can also download the executable from [Bintray](https://bintray.com/jfrog/goc).
+## Directly from Bintray
+Download the executable from [Bintray](https://bintray.com/jfrog/goc).
+
+## Homebrew
+Homebrew formula and other platform-specific installers are coming soon!
 
 # Building the Executable
 ```goc``` is written in the Go programming language, so to build ```goc``` yourself, you must have Go installed and configured on your workstation.
@@ -42,6 +47,10 @@ go build
 Q. I already have JFrog Artifactory set up to proxy GoCenter and GitHub within a virtual repository. What client should I use to build my Go project?
 
 A. ```goc``` only supports proxying modules from GoCenter. Use the [JFrog CLI](https://github.com/jfrog/jfrog-cli-go) to build your Go projects when using Artifactory, with GoCenter set up as a remote repository. [JFrog CLI](https://github.com/jfrog/jfrog-cli-go) provides a simple interface for a variety of functions with Artifactory. To learn how to use JFrog CLI, please visit the [JFrog CLI User Guide](https://www.jfrog.com/confluence/display/CLI/JFrog+CLI).
+
+Q. Doesn't using ```goc``` defeat some purposes of an immutable builds? For example, one can't be sure which dependencies are trustworthy (immutable, cached in GoCenter) and which are still volatile (coming from GitHub, for example).
+
+A. We recommend you use ```goc``` for development, until GoCenter includes all the dependencies you will ever need. For production builds you should lock down the resolution of dependencies and also use a local repository to host and cache your modules. 
 
 # Troubleshooting & Issues
 ## Communicating with us
