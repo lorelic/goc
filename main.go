@@ -41,9 +41,5 @@ func goCmd(c *cli.Context) error {
 		url = "https://gocenter.io/"
 	}
 
-	repo := os.Getenv("GOC_GO_CENTER_REPO")
-	if repo == "" {
-		repo = "gocenter-virtual"
-	}
-	return executers.Execute(strings.Join(args, " "), url, repo)
+	return executers.Execute(strings.Join(args, " "), url, "")
 }
