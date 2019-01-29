@@ -54,7 +54,7 @@ A. We recommend you use ```goc``` for development, until GoCenter includes all t
 
 # Troubleshooting & Issues
 
-##I'm getting "verifying … checksum mismatch" errors. Why is this happening?
+## I'm getting "verifying … checksum mismatch" errors. Why is this happening?
 
 [Read the FAQ on the GoCenter wiki](https://github.com/jfrog/gocenter/wiki/Frequently-Asked-Questions#im-getting-verifying--checksum-mismatch-errors-why-is-this-happening)
 
