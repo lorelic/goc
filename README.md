@@ -53,6 +53,11 @@ Q. Doesn't using ```goc``` defeat some purposes of an immutable builds? For exam
 A. We recommend you use ```goc``` for development, until GoCenter includes all the dependencies you will ever need. For production builds you should lock down the resolution of dependencies and also use a local repository to host and cache your modules. 
 
 # Troubleshooting & Issues
+
+##I'm getting "verifying … checksum mismatch" errors. Why is this happening?
+
+[Read the FAQ on the GoCenter wiki](https://github.com/jfrog/gocenter/wiki/Frequently-Asked-Questions#im-getting-verifying--checksum-mismatch-errors-why-is-this-happening)
+
 ## Communicating with us
 
 The best way to communicate with us is to open an issue on this repository. This is the correct channel for any issues you experience while using ```goc```, or any improvements you wish to discuss.
